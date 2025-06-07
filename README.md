@@ -1,19 +1,19 @@
 # PDF Bruteforce Tool
 
-Tool untuk melakukan brute force password pada file PDF yang terproteksi menggunakan wordlist.
+Tool to brute force passwords on protected PDF files using wordlist.
 
-## Deskripsi
+## Deskription
 
-Script Python ini menggunakan library `pikepdf` untuk mencoba berbagai password dari wordlist guna membuka file PDF yang dilindungi password. Tool ini berguna untuk penetration testing dan recovery password PDF yang terlupa.
+This Python script uses the `pikepdf` library to try different passwords from a wordlist to open a password-protected PDF file. This tool is useful for penetration testing and recovering forgotten PDF passwords.
 
-## Fitur
+## Feature
 
-- ✅ Brute force password PDF menggunakan wordlist
-- ✅ Support encoding UTF-8 untuk wordlist
-- ✅ Error handling yang baik
-- ✅ Progress indicator dengan nomor percobaan
-- ✅ Validasi file input
-- ✅ Command line interface yang mudah digunakan
+- ✅ Brute force PDF password using wordlist
+- ✅ Support UTF-8 encoding for wordlist
+- ✅ Good error handling
+- ✅ Progress indicator with attempt number
+- ✅ Input file validation
+- ✅ Easy to use command line interface
 
 ## Requirements
 
@@ -28,15 +28,15 @@ pip install pikepdf
 - File PDF target
 - Wordlist file
 
-## Instalasi
+## Installation
 
-1. Clone atau download script ini
-2. Install dependencies:
-   ```bash
-   pip install pikepdf
-   ```
+1. Clone or download this script
+2. Install dependencies: 
+```bash 
+pip install pikepdf 
+```
 
-## Penggunaan
+## Use
 
 ### Syntax Dasar
 ```bash
@@ -47,26 +47,26 @@ python bf.py -f <path_file_pdf> -w <path_wordlist>
 - `-f, --file`: Path ke file PDF yang ingin di-crack (required)
 - `-w, --wordlist`: Path ke file wordlist yang berisi daftar password (required)
 
-### Contoh Penggunaan
+### Usage examples
 
 1. **Basic usage:**
    ```bash
    python bf.py -f document.pdf -w passwords.txt
    ```
 
-2. **Dengan path lengkap:**
+2. **With full path:**
    ```bash
    python bf.py -f /path/to/encrypted.pdf -w /path/to/wordlist.txt
    ```
 
-3. **Menggunakan wordlist umum:**
+3. **Using a common wordlist:**
    ```bash
    python bf.py -f target.pdf -w /usr/share/wordlists/rockyou.txt
    ```
 
-## Format Wordlist
+## Wordlist Format
 
-Wordlist harus berupa file text dengan satu password per baris:
+Wordlist must be a text file with one password per line:
 ```
 password
 123456
@@ -77,7 +77,7 @@ letmein
 
 ## Output
 
-### Password Ditemukan
+### Password Found
 ```
 [+] Mulai brute force pada file: document.pdf
 [1] Mencoba: password
@@ -86,7 +86,7 @@ letmein
 [✓] Password ditemukan: 'admin'
 ```
 
-### Password Tidak Ditemukan
+### Password Not Found
 ```
 [+] Mulai brute force pada file: document.pdf
 [1] Mencoba: password
@@ -104,22 +104,22 @@ letmein
 [!] Error tidak terduga: <error_message>
 ```
 
-## Tips Penggunaan
+## Usage Tips
 
-1. **Gunakan wordlist yang tepat:**
-   - Untuk PDF personal: password umum, tanggal lahir, nama
-   - Untuk PDF corporate: kombinasi nama perusahaan, tahun, dll
-   - Wordlist besar: rockyou.txt, common-passwords.txt
+1. **Use the right wordlist:**
+   - For personal PDFs: common passwords, birth dates, names
+   - For corporate PDFs: a combination of company name, year, etc.
+   - Large wordlists: rockyou.txt, common-passwords.txt
 
-2. **Optimasi performa:**
-   - Mulai dengan password pendek dan umum
-   - Gunakan wordlist yang sudah disortir berdasarkan popularitas
-   - Monitor penggunaan CPU dan memory
+2. **Performance optimization:**
+   - Start with short and common passwords
+   - Use wordlists sorted by popularity
+   - Monitor CPU and memory usage
 
-3. **Keamanan:**
-   - Hanya gunakan pada file PDF yang Anda miliki
-   - Jangan gunakan untuk tujuan ilegal
-   - Backup file PDF sebelum mencoba
+3. **Security:**
+   - Only use on PDF files you own
+   - Do not use for illegal purposes
+   - Backup PDF files before trying
 
 ## Troubleshooting
 
@@ -133,39 +133,39 @@ pip install pikepdf
 chmod +x bf.py
 ```
 
-### File tidak ditemukan
-- Pastikan path file PDF dan wordlist benar
-- Gunakan path absolut jika perlu
-- Periksa permission file
+### File not found
+- Make sure the PDF file path and wordlist are correct
+- Use absolute path if necessary
+- Check file permissions
 
 ## Ethical Usage
 
-⚠️ **PENTING**: Tool ini hanya boleh digunakan untuk:
-- File PDF milik sendiri
-- Penetration testing yang authorized
+⚠️ **IMPORTANT**: This tool should only be used for:
+- Own PDF files
+- Authorized penetration testing
 - Educational purposes
-- Password recovery yang legitimate
+- Legitimate password recovery
 
-❌ **JANGAN** gunakan untuk:
-- Mengakses file PDF orang lain tanpa izin
-- Aktivitas ilegal
-- Melanggar privacy orang lain
+❌ **DO NOT** use for:
+- Accessing other people's PDF files without permission
+- Illegal activities
+- Violating other people's privacy
 
-## Limitasi
+## Limitations
 
-- Kecepatan tergantung pada kompleksitas password dan ukuran wordlist
-- Tidak efektif untuk password yang sangat kompleks atau panjang
-- Memory usage meningkat dengan wordlist yang besar
+- Speed ​​depends on password complexity and wordlist size
+- Not effective for very complex or long passwords
+- Memory usage increases with large wordlists
 
-## Lisensi
+## License
 
-Tool ini dibuat untuk tujuan edukasi dan testing. Pengguna bertanggung jawab atas penggunaan tool ini.
+This tool is made for educational and testing purposes. Users are responsible for the use of this tool.
 
 ## Author
 
-Dibuat untuk IDN Bootcamp - PDF Security Testing
+Created for IDN Cyber ​​Security Bootcamp
 
 ---
 
-**Disclaimer**: Tool ini dibuat untuk tujuan edukasi dan security testing. Penggunaan yang tidak bertanggung jawab adalah risiko pengguna.
+**Disclaimer**: This tool is made for educational and security testing purposes. Irresponsible use is at the user's own risk.
 
