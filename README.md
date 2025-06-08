@@ -2,7 +2,7 @@
 
 Tool to brute force passwords on protected PDF files using wordlist.
 
-## Deskription
+## Description
 
 This Python script uses the `pikepdf` library to try different passwords from a wordlist to open a password-protected PDF file. This tool is useful for penetration testing and recovering forgotten PDF passwords.
 
